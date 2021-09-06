@@ -1,0 +1,33 @@
+<app-header></app-header>
+    <div class="container mt-5">
+        <div class="row">
+          <table class="table text-center">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">NAME</th>
+                <th scope="col">NUMBER</th>
+                <th scope="col">E-MAIL</th>
+                <th scope="col">CLASS</th>
+                <th scope="col">VIEW</th>
+                <th scope="col">UPDATE</th>
+                <th scope="col">DELETE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of listStudent">
+                  <th>{{item.id}}</th>
+                  <th>{{item.name}}</th>
+                  <th>{{item.number}}</th>
+                  <th>{{item.mail-id}}</th>
+                  <th>{{item.class}}</th>
+                  <th><button (click)="viewStudent(blog.id)" class="btn btn-primary">View</button></th>
+                  <th><button (click)="updateStudent(blog.id)" class="btn btn-info">Update</button></th>
+                  <th><button (click)="deleteStudent(blog.id)" class="btn btn-danger">Delete</button></th>
+              </tr>        
+            </tbody>
+          </table>
+          <th><button (click)="createStudent()" class="btn btn-success">Add Student</button></th>
+        </div>
+      </div>
+ <app-footer></app-footer>
