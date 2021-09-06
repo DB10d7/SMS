@@ -21,6 +21,13 @@ export class SmsServiceService {
   }
   createStudent(data:any){
     console.log(this.http.get(this.url,data));
-    return this.http.get(this.url,data);
+    return this.http.post<any>(this.url,data);
+  }
+  viewStudent(id: number){
+    console.log(this.http.get("http://localhost:3000/student/"+id));
+    return this.http.get("http://localhost:3000/student/"+id);
+  }
+  updateStudent(id: number, data: any){
+    return this.http.put<any>("http://localhost:3000/student/update/"+id, data);
   }
 }

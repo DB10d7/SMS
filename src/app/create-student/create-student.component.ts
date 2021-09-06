@@ -30,7 +30,7 @@ export class CreateStudentComponent implements OnInit {
       console.warn("data is here",result);
       alert("Student Added Successfully");
       this.createStudents.reset();
-      this.router.navigate(['blog']);
+      this.router.navigate(['student']);
     })
   }
 }
